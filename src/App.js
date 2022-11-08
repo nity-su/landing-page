@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import GlobalStyle from "./GlobalStyle";
+import Footer from "./components/Footer";
+
 const FirstPage = styled.div`
   width: 100%;
   height: 100vh;
@@ -18,11 +21,15 @@ const ThreePage = styled.div`
 `;
 function App() {
   return (
-    <div>
-      <FirstPage />
-      <SecondPage />
-      <ThreePage />
-    </div>
+    <>
+      <GlobalStyle />
+      <div>
+        <FirstPage />
+        <SecondPage />
+        <ThreePage />
+        <Footer />
+      </div>
+    </>
   );
 }
 
