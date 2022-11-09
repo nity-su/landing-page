@@ -5,6 +5,6 @@ const Container = styled.div`
   height: 30vh;
   background-color: darkgray;
 `;
-export default function ContentsPage() {
+export default function QuestionAnswerPage() {
   return <Container />;
 }
