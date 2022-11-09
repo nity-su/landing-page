@@ -21,7 +21,6 @@ function App() {
       <Container>
         <SplinePage />
         <ContentsPage />
-        <BuyLinkPage />
         <QuestionAnswerPage />
         <Footer />
       </Container>
