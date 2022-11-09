@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  width: 100vw;
+  width: 1024px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ const TitleText = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 48px;
 `;
 const EndingCredit = styled.div`
   width: 1024px;

@@ -5,7 +5,6 @@ import BuyLinkPage from "@components/BuyLinkPage";
 import ContentsPage from "@components/ContentsPage";
 import QuestionAnswerPage from "@components/QuestionAnswerPage";
 import Footer from "@components/Footer";
-
 const Container = styled.div`
   width: 100vw;
   display: flex;
