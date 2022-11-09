@@ -4,6 +4,7 @@ import SplinePage from "@components/SplinePage";
 // import BuyLinkPage from "@components/BuyLinkPage";
 import ContentsPage from "@components/ContentsPage";
 import QuestionAnswerPage from "@components/QuestionAnswerPage";
+import TeamMembers from "@components/TeamMembers";
 import Footer from "@components/Footer";
 
 const Container = styled.div`
@@ -19,12 +20,14 @@ function App() {
   return (
     <>
       <GlobalStyle />
+
       <Container>
         <SplinePage />
         <ContentsPage />
         <QuestionAnswerPage />
         <Footer />
       </Container>
+
     </>
   );
 }
