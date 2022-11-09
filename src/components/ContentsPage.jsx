@@ -8,6 +8,7 @@ const Container = styled.div`
   background-color: #c73ac7;
 `;
 
+
 const Square = styled.div`
   position: absolute;
   width: 353px;
@@ -55,6 +56,7 @@ const BodyText = styled.span`
   align-items: center;
   margin-left: 0px;
 `;
+
 
 export default function ContentsPage() {
   return (
