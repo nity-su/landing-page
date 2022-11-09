@@ -20,14 +20,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-
       <Container>
         <SplinePage />
         <ContentsPage />
+        <TeamMembers />
         <QuestionAnswerPage />
         <Footer />
       </Container>
-
     </>
   );
 }
