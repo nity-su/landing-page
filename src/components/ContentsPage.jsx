@@ -2,6 +2,85 @@ import styled from "styled-components";
 import { BsMusicNoteBeamed } from "react-icons/bs";
 import musicImage from "@assets/images/meter_music.jpg";
 
+import font from "@assets/font.css";
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f5f5f5;
+`;
+
+// const MusicImage = styled.img`
+//   display: flex;
+//   flex-direction: column;
+//   width: 100vw;
+//   justify-content: center;
+//   align-items: flex-end;
+// `;
+
+const HeaderText = styled.span`
+  margin-top: 20px;
+  margin-left: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #000000;
+
+  div {
+    height: 15px;
+    margin: 10px 10px;
+    line-height: 15px;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+`;
+
+const MainText = styled.span`
+  display: flex;
+  padding: 44px 0px;
+  justify-content: center;
+  align-items: center;
+  span {
+    padding-left: 7px;
+    font-size: 16px;
+    color: #000000;
+    font-family: "Cafe24Danjunghae";
+  }
+`;
+
+const Square = styled.div`
+  width: 353px;
+  height: 242px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 16px;
+  background: rgba(35, 41, 214, 0.08);
+`;
+
+const BodyText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  div {
+    height: 20px;
+    margin: 18px 20px;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+`;
+
+
+
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -58,11 +137,17 @@ const BodyText = styled.span`
 `;
 
 
+
 export default function ContentsPage() {
   return (
     <Container>
       <HeaderText>
         <BsMusicNoteBeamed className="icone" color="green" />
+
+        <div>What we want to service for a great fan of music</div>
+        <BsMusicNoteBeamed className="icone" color="green" />
+      </HeaderText>
+
         <br />
         <br />
         What we want to service <br />
@@ -73,6 +158,7 @@ export default function ContentsPage() {
       <br />
       <br />
       <br />
+
       <MainText>
         <svg
           width="24"
@@ -91,6 +177,28 @@ export default function ContentsPage() {
           <path d="M3 7L12 12L21 7" stroke="#2329D6" />
           <path d="M12 12V22" stroke="#2329D6" />
         </svg>
+
+        <span> Music Album with NFT</span>
+      </MainText>
+      <Square>
+        <BodyText>
+          <div>
+            나만의 가상공간에 친구들을 불러서 음악과 뮤직비디오를 감상할 수
+            있습니다.
+          </div>
+          <div>
+            스타들과의 특별한 커뮤니케이션과 한정판 굿즈들이 제공됩니다.
+          </div>
+          <div>
+            스타와 함께 성장하는 NFT의 소유자가 될 수 있습니다. 스타와 함께
+            부자가 될지도 모릅니다.
+          </div>
+          <div>
+            오프라인 유통마진을 없앤 저렴한 친환경 NFT 앨범으로 제작됩니다.
+          </div>
+        </BodyText>
+      </Square>
+
         Music Album with NFT
       </MainText>
       <br />
@@ -117,6 +225,7 @@ export default function ContentsPage() {
         </BodyText>
       </Square>
       <MusicImage src={musicImage} />
+
     </Container>
   );
 }
