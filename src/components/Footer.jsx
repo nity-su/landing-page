@@ -13,13 +13,11 @@ const FooterContainer = styled.div`
 `;
 
 const LogoLion = styled.div`
-  width: 1024px;
   display: flex;
   flex-direction: column;
   font-size: 14px;
 `;
 const TitleText = styled.div`
-  width: 1024px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +25,6 @@ const TitleText = styled.div`
   font-size: 48px;
 `;
 const EndingCredit = styled.div`
-  width: 1024px;
   margin-top: 20px;
   div:nth-child(1) {
     margin-bottom: 10px;
