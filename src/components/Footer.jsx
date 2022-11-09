@@ -2,14 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  width: 1024px;
+  width: 390px;
   height: 300px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   color: #fdfbfc;
-  background-color: #1c1817;
+  @media screen and (min-width: 720px) {
+    width: 780px;
+    height: 652px;
+  }
 `;
 
 const LogoLion = styled.div`
@@ -19,6 +23,9 @@ const LogoLion = styled.div`
     font-size: 14px;
     font-family: "Inter";
     font-weight: 800;
+    @media screen and (min-width: 720px) {
+      font-size: 28px;
+    }
   }
 `;
 const TitleText = styled.div`
@@ -30,21 +37,30 @@ const TitleText = styled.div`
   div {
     font-size: 36px;
     font-weight: 800;
+    @media screen and (min-width: 720px) {
+      font-size: 72px;
+    }
   }
 `;
 const EndingCredit = styled.div`
   margin-top: 20px;
-  div: {
+  div {
     font-family: "Inter";
     font-weight: 400;
   }
   div:nth-child(1) {
     margin-bottom: 10px;
     font-size: 12px;
+    @media screen and (min-width: 720px) {
+      font-size: 24px;
+    }
   }
   div:nth-child(2) {
     margin-bottom: 10px;
     font-size: 14px;
+    @media screen and (min-width: 720px) {
+      font-size: 28px;
+    }
   }
 `;
 
