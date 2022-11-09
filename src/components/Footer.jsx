@@ -7,7 +7,7 @@ const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   color: #fdfbfc;
   background-color: #1c1817;
 `;
@@ -16,13 +16,16 @@ const LogoLion = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 14px;
+  font-weight: 700;
 `;
 const TitleText = styled.div`
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: 48px;
+  font-weight: 900;
 `;
 const EndingCredit = styled.div`
   margin-top: 20px;
