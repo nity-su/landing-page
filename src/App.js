@@ -4,6 +4,7 @@ import SplinePage from "@components/SplinePage";
 import BuyLinkPage from "@components/BuyLinkPage";
 import ContentsPage from "@components/ContentsPage";
 import QuestionAnswerPage from "@components/QuestionAnswerPage";
+import TeamMembers from "@components/TeamMembers";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ContentsPage />
       <BuyLinkPage />
       <QuestionAnswerPage />
+      <TeamMembers />
     </>
   );
 }
