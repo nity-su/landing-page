@@ -4,15 +4,28 @@ import SplinePage from "@components/SplinePage";
 import BuyLinkPage from "@components/BuyLinkPage";
 import ContentsPage from "@components/ContentsPage";
 import QuestionAnswerPage from "@components/QuestionAnswerPage";
+import Footer from "@components/Footer";
+
+const Container = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #1c1817;
+`;
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <SplinePage />
-      <ContentsPage />
-      <BuyLinkPage />
-      <QuestionAnswerPage />
+      <Container>
+        <SplinePage />
+        <ContentsPage />
+        <BuyLinkPage />
+        <QuestionAnswerPage />
+        <Footer />
+      </Container>
     </>
   );
 }
