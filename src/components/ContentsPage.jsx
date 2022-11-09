@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BsMusicNoteBeamed } from "react-icons/bs";
+import musicImage from "@assets/images/meter_music.jpg";
 
 const Container = styled.div`
   width: 100%;
@@ -7,8 +8,29 @@ const Container = styled.div`
   background-color: #c73ac7;
 `;
 
+const Square = styled.div`
+  position: absolute;
+  width: 353px;
+  height: 242px;
+  left: 17px;
+  top: 476px;
+  background: rgba(255, 255, 255, 0.301);
+  border-radius: 16px;
+`;
+
+// width: 100%;
+// height: auto;
+
+const MusicImage = styled.img`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
 const HeaderText = styled.span`
-  color: rgba(255, 255, 255, 0.64);
+  color: rgba(0, 0, 0, 0.64);
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -18,7 +40,7 @@ const HeaderText = styled.span`
 `;
 
 const MainText = styled.span`
-  color: #00ff2a;
+  color: #b7d3bc;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -41,38 +63,58 @@ export default function ContentsPage() {
         <BsMusicNoteBeamed className="icone" color="green" />
         <br />
         <br />
-        열렬한 팬들을 위해 <br />
-        준비한 프로젝트!!!
+        What we want to service <br />
+        for a great fan of music
         <BsMusicNoteBeamed className="icone" color="blue" />
       </HeaderText>
 
       <br />
       <br />
       <br />
-      <MainText>음악 앨범 NFT</MainText>
+      <MainText>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 2L21 7V17L12 22L3 17V7L12 2Z"
+            stroke="#2329D6"
+            stroke-linejoin="round"
+          />
+          <path d="M3 7L12 12L21 7" stroke="#2329D6" />
+          <path d="M12 12V22" stroke="#2329D6" />
+        </svg>
+        Music Album with NFT
+      </MainText>
       <br />
       <br />
       <br />
-
-      <BodyText>
-        1.나만의 가상공간에서 팬들과 소통하세요.
-        <br />
-        <br />
-        <br />
-        2.스타와 함께 성장하는 NFT의 소유자가 됩니다.
-        <br />
-        <br />
-        <br />
-        3.나의 스타와 특별한 소통 그리고 선물이 있어요.
-        <br />
-        <br />
-        <br />
-        4.거품을 없애 저렴하고 친환경적인 앨범입니다.
-        <br />
-        <br />
-        <br />
-      </BodyText>
-      <img className="metaBusImage" alt="metaBus" src="img/metaBus.jpg" />
+      <Square>
+        <BodyText>
+          1.나만의 가상공간에서 팬들과 소통하세요.
+          <br />
+          <br />
+          <br />
+          2.스타와 함께 성장하는 NFT의 소유자가 됩니다.
+          <br />
+          <br />
+          <br />
+          3.나의 스타와 특별한 소통 그리고 선물이 있어요.
+          <br />
+          <br />
+          <br />
+          4.거품을 없애 저렴하고 친환경적인 앨범입니다.
+          <br />
+          <br />
+          <br />
+        </BodyText>
+      </Square>
+      <MusicImage src={musicImage} />
     </Container>
   );
 }
