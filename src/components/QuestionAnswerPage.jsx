@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { ReactComponent as TumbsUp } from "@assets/svg/tumbsUp.svg";
+import { ReactComponent as RightArrow } from "@assets/svg/rightArrow.svg";
 import { useState } from "react";
 
 // 주의사항. wrapper > box
+// wrapper는 box의 부모 컴포넌트이다.
 
 const Container = styled.div`
   position: relative;
@@ -11,9 +13,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
-
   padding-bottom: 47px;
-
   background: #f5f5f5;
 `;
 // Title width 142px 맞추면 줄바꿈 현상.
@@ -48,6 +48,8 @@ const QuestionAsnwerBox = styled.div`
 `;
 
 const QuestionBox = styled.div`
+  display: flex;
+  align-items: center;
   position: relative;
   width: 389px;
   height: 42px;
@@ -70,7 +72,7 @@ const AnswerBox = styled.div`
   position: relative;
   width: 325px;
   height: 155px;
-  padding: 20px 28px 0px 37px;
+  padding: 20px 28px 0px 36px;
   background: #ffffff;
   margin: 0px 37px 0px 28px;
 
@@ -79,14 +81,22 @@ const AnswerBox = styled.div`
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+  vertical-align: top;
 
   color: #000000;
+  white-space: pre-line;
 `;
 
 const TumbsUpBox = styled.div`
   position: absolute;
   left: 39px;
   bottom: 4px;
+`;
+
+const ArrowBox = styled.div`
+  position: absolute;
+  right: 30px;
+  transform: ${(props) => (props.isTurn ? "rotate(90deg)" : null)};
 `;
 
 export default function QuestionAnswerPage() {
@@ -110,7 +120,7 @@ export default function QuestionAnswerPage() {
     {
       Question: "1.블록체인 지갑을 설치해야만 하나요?",
       Answer:
-        "네,  구매하신 NFT는 블록체인 지갑에 존재하게 되고 지갑에 있는  NFT를 열쇠로하여(아이디와 비번통합) 접속하시기 때문에 필수설치하셔야 합니다. 설치에 대한 안내는 아래 링크를 참조해 주세요",
+        "네,  구매하신 NFT는 블록체인 지갑에 존재하게 되고 지갑에 있는  NFT를 열쇠로하여(아이디와 비번통합) 접속하시기 때문에 필수설치하셔야 합니다. \n\n 설치에 대한 안내는 아래 링크를 참조해 주세요",
     },
   ];
 
@@ -140,17 +150,18 @@ export default function QuestionAnswerPage() {
 function Question({ data, setShowAnswer, state, index }) {
   console.log(data);
   return (
-    <QuestionBox>
-      <QuestionTextBox
-        onClick={() => {
-          setShowAnswer((array) => {
-            array[index] = state ? false : true;
-            return [...array];
-          });
-        }}
-      >
-        {data}
-      </QuestionTextBox>
+    <QuestionBox
+      onClick={() => {
+        setShowAnswer((array) => {
+          array[index] = state ? false : true;
+          return [...array];
+        });
+      }}
+    >
+      <QuestionTextBox>{data}</QuestionTextBox>
+      <ArrowBox isTurn={state}>
+        <RightArrow />
+      </ArrowBox>
     </QuestionBox>
   );
 }
