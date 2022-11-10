@@ -19,8 +19,8 @@ const ImageBox = styled.div`
   background-position: top;
 
   @media screen and (min-width: 720px) {
-    width: 780px;
-    height: 652px;
+    width: 640px;
+    height: 480px;
   }
 `;
 
@@ -31,7 +31,7 @@ const WhatWeDo = styled.div`
   color: #5d4f44;
   @media screen and (min-width: 720px) {
     margin: 28px 34px;
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 const TitleText = styled.div`
@@ -42,9 +42,10 @@ const TitleText = styled.div`
   font-weight: bold;
   color: #5d4f44;
   @media screen and (min-width: 720px) {
-    margin-top: 241px;
-    margin-left: 460px;
-    font-size: 34px;
+    margin-top: 180px;
+    margin-left: 370px;
+    font-size: 26px;
+    font-weight: 500;
   }
 `;
 const SloganText = styled.div`
@@ -55,9 +56,9 @@ const SloganText = styled.div`
   font-weight: 500;
   color: #5d4f44;
   @media screen and (min-width: 720px) {
-    margin-top: 260px;
+    margin-top: 180px;
     margin-left: 34px;
-    font-size: 28px;
+    font-size: 16px;
   }
 `;
 
