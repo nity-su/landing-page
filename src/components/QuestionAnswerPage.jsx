@@ -85,6 +85,8 @@ const AnswerBox = styled.div`
 
   color: #000000;
   white-space: pre-line;
+  word-spacing: -1px;
+  letter-spacing: -0.5px;
 `;
 
 const TumbsUpBox = styled.div`
@@ -120,7 +122,7 @@ export default function QuestionAnswerPage() {
     {
       Question: "1.블록체인 지갑을 설치해야만 하나요?",
       Answer:
-        "네,  구매하신 NFT는 블록체인 지갑에 존재하게 되고 지갑에 있는  NFT를 열쇠로하여(아이디와 비번통합) 접속하시기 때문에 필수설치하셔야 합니다. \n\n 설치에 대한 안내는 아래 링크를 참조해 주세요",
+        "네,  구매하신 NFT는 블록체인 지갑에 존재하게 되고 지갑에 있는 NFT를 열쇠로하여(아이디와 비번통합) 접속하시기 때문에 필수설치하셔야 합니다. \n\n 설치에 대한 안내는 아래 링크를 참조해 주세요",
     },
   ];
 
@@ -129,7 +131,6 @@ export default function QuestionAnswerPage() {
       <Title>자주하는 질문 정리 FAQ</Title>
       <QuestionAsnwerWrapper>
         {QA_DATA.map((e, i) => {
-          console.table(e);
           return (
             <QuestionAsnwerBox key={i}>
               <Question
@@ -148,7 +149,6 @@ export default function QuestionAnswerPage() {
 }
 
 function Question({ data, setShowAnswer, state, index }) {
-  console.log(data);
   return (
     <QuestionBox
       onClick={() => {
