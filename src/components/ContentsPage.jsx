@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BsMusicNoteBeamed } from "react-icons/bs";
 import font from "@assets/font.css";
 
 const Container = styled.div`
@@ -47,12 +46,10 @@ const MainText = styled.span`
 const Square = styled.div`
   width: 353px;
   height: 242px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  border-radius: 16px;
+  left: 17px;
+  top: 476px;
   background: rgba(35, 41, 214, 0.08);
+  border-radius: 16px;
 `;
 
 const BodyText = styled.div`
@@ -73,9 +70,7 @@ export default function ContentsPage() {
   return (
     <Container>
       <HeaderText>
-        <BsMusicNoteBeamed className="icone" color="green" />
         <div>What we want to service for a great fan of music</div>
-        <BsMusicNoteBeamed className="icone" color="green" />
       </HeaderText>
       <MainText>
         <svg
