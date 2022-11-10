@@ -129,7 +129,6 @@ export default function QuestionAnswerPage() {
       <Title>자주하는 질문 정리 FAQ</Title>
       <QuestionAsnwerWrapper>
         {QA_DATA.map((e, i) => {
-          console.table(e);
           return (
             <QuestionAsnwerBox key={i}>
               <Question
@@ -148,7 +147,6 @@ export default function QuestionAnswerPage() {
 }
 
 function Question({ data, setShowAnswer, state, index }) {
-  console.log(data);
   return (
     <QuestionBox
       onClick={() => {
