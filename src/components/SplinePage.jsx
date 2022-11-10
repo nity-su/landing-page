@@ -5,6 +5,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f5f5f5;
   @media screen and (min-width: 720px) {
   }
 `;
@@ -16,6 +17,7 @@ const ImageBox = styled.div`
   background-size: cover;
   background-position: left;
   background-position: top;
+
   @media screen and (min-width: 720px) {
     width: 780px;
     height: 652px;
