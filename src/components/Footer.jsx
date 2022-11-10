@@ -52,14 +52,14 @@ const EndingCredit = styled.div`
     margin-bottom: 10px;
     font-size: 12px;
     @media screen and (min-width: 720px) {
-      font-size: 24px;
+      font-size: 14px;
     }
   }
   div:nth-child(2) {
     margin-bottom: 10px;
     font-size: 14px;
     @media screen and (min-width: 720px) {
-      font-size: 28px;
+      font-size: 16px;
     }
   }
 `;
@@ -78,7 +78,7 @@ function Footer() {
       </TitleText>
       <EndingCredit>
         <div>도와주신분들 ...</div>
-        <div>한상훈 장이화 정지원 이승태 최영은 김의왕 h622 ...</div>
+        <div>한상훈 박민서 장이화 정지원 이승태 최영은 김의왕 h622 ...</div>
       </EndingCredit>
     </FooterContainer>
   );
