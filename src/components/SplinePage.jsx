@@ -45,7 +45,7 @@ const TitleText = styled.div`
     margin-top: 180px;
     margin-left: 370px;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 700;
   }
 `;
 const SloganText = styled.div`
