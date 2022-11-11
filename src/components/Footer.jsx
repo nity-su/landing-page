@@ -46,7 +46,7 @@ const EndingCredit = styled.div`
   margin-top: 20px;
   div {
     font-family: "Inter";
-    font-weight: 400;
+    font-weight: 600;
   }
   div:nth-child(1) {
     margin-bottom: 10px;

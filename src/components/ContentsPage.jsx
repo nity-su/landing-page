@@ -1,10 +1,10 @@
 import styled from "styled-components";
-// import font from "@assets/font.css";
 
 const Container = styled.div`
   width: 100%;
   display: flex;
-  padding-bottom: 20px;
+  padding: 20px;
+
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -19,14 +19,13 @@ const HeaderText = styled.span`
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  color: #000000;
 
   div {
     height: 15px;
     margin: 10px 10px;
-    line-height: 15px;
     font-size: 14px;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Inter";
+    color: #5d4f44;
   }
 `;
 
@@ -38,16 +37,17 @@ const MainText = styled.span`
   span {
     padding-left: 7px;
     font-size: 16px;
-    color: #000000;
-    font-family: "Cafe24Danjunghae";
+    font-family: "Inter";
+    font-weight: 700;
+    color: #5d4f44;
   }
 `;
 
 const Square = styled.div`
   width: 353px;
   height: 242px;
-  left: 17px;
-  top: 476px;
+  margin-bottom: 30px;
+
   background: rgba(35, 41, 214, 0.08);
   border-radius: 16px;
 `;

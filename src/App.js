@@ -3,6 +3,7 @@ import GlobalStyle from "./GlobalStyle";
 import SplinePage from "@components/SplinePage";
 // import BuyLinkPage from "@components/BuyLinkPage";
 import ContentsPage from "@components/ContentsPage";
+// import ContentsPageTwo from "@components/ContentsPageTwo";
 import QuestionAnswerPage from "@components/QuestionAnswerPage";
 import TeamMembers from "@components/TeamMembers";
 import Footer from "@components/Footer";
@@ -23,6 +24,7 @@ function App() {
       <Container>
         <SplinePage />
         <ContentsPage />
+        {/* <ContentsPageTwo /> */}
         <TeamMembers />
         <QuestionAnswerPage />
         <Footer />
