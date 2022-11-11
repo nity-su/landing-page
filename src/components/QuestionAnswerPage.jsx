@@ -35,12 +35,18 @@ const Title = styled.span`
 `;
 
 const QuestionAsnwerWrapper = styled.div`
+  margin-top: 70px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  margin-top: 70px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 `;
 
 const QuestionAsnwerBox = styled.div`
@@ -75,6 +81,21 @@ const AnswerBox = styled.div`
   padding: 20px 28px 0px 36px;
   background: #ffffff;
   margin: 0px 37px 0px 28px;
+  animation-name: ${(props) => {
+    return props.expand ? "shape" : "";
+  }};
+  animation-duration: 1s;
+
+  @keyframes shape {
+    from {
+      height: 0px;
+      opacity: 0;
+    }
+    to {
+      height: 155px;
+      opacity: 1;
+    }
+  }
 
   font-family: "Inter";
   font-style: normal;
@@ -139,7 +160,9 @@ export default function QuestionAnswerPage() {
                 index={i}
                 state={showAnswer[i]}
               />
-              {showAnswer[i] ? <Answer answer={e.Answer} /> : null}
+              {showAnswer[i] ? (
+                <Answer expand={showAnswer[i]} answer={e.Answer} />
+              ) : null}
             </QuestionAsnwerBox>
           );
         })}
@@ -166,9 +189,9 @@ function Question({ data, setShowAnswer, state, index }) {
   );
 }
 
-function Answer({ answer }) {
+function Answer({ answer, expand }) {
   return (
-    <AnswerBox>
+    <AnswerBox expand={expand}>
       {answer}
       <TumbsUpBox>
         <TumbsUp width={15} height={15} />
