@@ -35,12 +35,18 @@ const Title = styled.span`
 `;
 
 const QuestionAsnwerWrapper = styled.div`
+  margin-top: 70px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  margin-top: 70px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 `;
 
 const QuestionAsnwerBox = styled.div`
@@ -75,6 +81,21 @@ const AnswerBox = styled.div`
   padding: 20px 28px 0px 36px;
   background: #ffffff;
   margin: 0px 37px 0px 28px;
+  animation-name: ${(props) => {
+    return props.expand ? "shape" : "";
+  }};
+  animation-duration: 1s;
+
+  @keyframes shape {
+    from {
+      height: 0px;
+      opacity: 0;
+    }
+    to {
+      height: 155px;
+      opacity: 1;
+    }
+  }
 
   font-family: "Inter";
   font-style: normal;
@@ -85,6 +106,8 @@ const AnswerBox = styled.div`
 
   color: #000000;
   white-space: pre-line;
+  word-spacing: -1px;
+  letter-spacing: -0.5px;
 `;
 
 const TumbsUpBox = styled.div`
@@ -120,7 +143,7 @@ export default function QuestionAnswerPage() {
     {
       Question: "1.블록체인 지갑을 설치해야만 하나요?",
       Answer:
-        "네,  구매하신 NFT는 블록체인 지갑에 존재하게 되고 지갑에 있는  NFT를 열쇠로하여(아이디와 비번통합) 접속하시기 때문에 필수설치하셔야 합니다. \n\n 설치에 대한 안내는 아래 링크를 참조해 주세요",
+        "네,  구매하신 NFT는 블록체인 지갑에 존재하게 되고 지갑에 있는 NFT를 열쇠로하여(아이디와 비번통합) 접속하시기 때문에 필수설치하셔야 합니다. \n\n 설치에 대한 안내는 아래 링크를 참조해 주세요",
     },
   ];
 
@@ -129,7 +152,6 @@ export default function QuestionAnswerPage() {
       <Title>자주하는 질문 정리 FAQ</Title>
       <QuestionAsnwerWrapper>
         {QA_DATA.map((e, i) => {
-          console.table(e);
           return (
             <QuestionAsnwerBox key={i}>
               <Question
@@ -138,7 +160,9 @@ export default function QuestionAnswerPage() {
                 index={i}
                 state={showAnswer[i]}
               />
-              {showAnswer[i] ? <Answer answer={e.Answer} /> : null}
+              {showAnswer[i] ? (
+                <Answer expand={showAnswer[i]} answer={e.Answer} />
+              ) : null}
             </QuestionAsnwerBox>
           );
         })}
@@ -148,7 +172,6 @@ export default function QuestionAnswerPage() {
 }
 
 function Question({ data, setShowAnswer, state, index }) {
-  console.log(data);
   return (
     <QuestionBox
       onClick={() => {
@@ -166,9 +189,9 @@ function Question({ data, setShowAnswer, state, index }) {
   );
 }
 
-function Answer({ answer }) {
+function Answer({ answer, expand }) {
   return (
-    <AnswerBox>
+    <AnswerBox expand={expand}>
       {answer}
       <TumbsUpBox>
         <TumbsUp width={15} height={15} />
